@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  
+  <title>Frontend Mentor | Crowdfunding product page</title>
+
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="hero-image-container">
+      <img src="images/image-hero-mobile.jpg" alt="Image of product" class="hero-image-mobile">
+      <img src="images/image-hero-desktop.jpg" alt="Image of product" class="hero-image-desktop">
+    </div>
+
+    <nav class="navbar-container max-width">
+      <a href=# class="logo-container">
+        <img src="images/logo.svg" alt="Logo" class="logo">
+      </a>
+      <img src="images/icon-close-menu.svg" alt="Navigation close button" class="close-icon-navbar">
+      <img src="images/icon-hamburger.svg" alt="Hamburger navigation button" class="hamburger-icon">
+      <div class="nav-links-container">
+        <ul class="nav-links">
+          <li class="nav-link-item border-bottom">
+            <a href="#">About</a>
+          </li>
+          <li class="nav-link-item border-bottom">
+            <a href="#">Discover</a>
+          </li>
+          <li class="nav-link-item">
+            <a href="#">Get Started</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <section class="title-card">
+    <div class="title-card-inner">
+      <img src="images/logo-mastercraft.svg" alt="Mastercraft Logo" class="item-logo">
+      <h1 class="item-title">Mastercraft Bamboo Monitor Riser</h1>
+      <h2 class="item-tag">A beautifully handcrafted monitor stand to reduce neck and eye strain.</h2>
+      <h2 class="item-tag-alt">A beautiful & handcrafted monitor stand to reduce neck and eye strain.</h2>
+  
+      <div class="title-card-button-div">
+        <button type="button" class="support-project-button">Back this project</button>
+        <a href=#bookmark class="bookmark-links-div">
+          <img src="images/icon-bookmark.svg" alt="Bookmark icon" class="bookmark-icon">
+          <button type="button" class="bookmark-text-button">Bookmark</button>
+        </a>
+      </div>
+    </div>
+  </section>
+  
+  <section class="status-card">
+    <div class="status-three-column-div">
+      <div>
+        <div class="current-funds"></div>
+        <p>of $100,000 backed</p>
+        <div class="border-rule"></div>
+      </div>
+      <div>
+        <div class="backers"></div>
+        <p>total backers</p>
+        <div class="border-rule"></div>
+      </div>
+      <div>
+        <div class="days-left"></div>
+        <p>days left</p>
+      </div>
+    </div>
+    
+    <div class="progress-bar-container">
+      <div class="progress-bar-fill"></div>
+      <div class="progress-bar"></div>
+    </div>
+  </section>
+  
+  <section class="main-card">
+    <h3>About this project</h3>
+    <p class="about-p">
+      The Mastercraft Bamboo Monitor Riser is a sturdy and stylish platform that elevates your screen to a more comfortable viewing height. Placing your monitor at eye level has the potential to improve your posture and make you more comfortable while at work, helping you stay focused on the task at hand.
+    </p>
+    <p>
+      Featuring artisan craftsmanship, the simplicity of design creates extra desk space below your computer to allow notepads, pens, and USB sticks to be stored under the stand.
+    </p>
+    
+    <div class="pledge-card">
+      <div class="pledge-tier">
+        <h4 class="pledge-name">Bamboo Stand</h4>
+        <h5 class="pledge-donation">Pledge $25 or more</h5>
+      </div>
+      <p>
+        You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and you’ll be added to a special Backer member list.
+      </p>
+      <div class="pledge-remaining-button-container">
+        <div class="pledge-remaining-container">
+          <div class="pledge-remaining tier-1-stock"></div>
+          <p>left</p>
+        </div>
+        <button type="button" class="select-button" id="select-tier-1">Select Reward</button>
+      </div>
+    </div>
+
+    <div class="pledge-card">
+      <div class="pledge-tier">
+        <h4 class="pledge-name">Black Edition Stand</h4>
+        <h5 class="pledge-donation">Pledge $75 or more</h5>
+      </div>
+      <p>
+        You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer member list. Shipping is included.
+      </p>
+      <div class="pledge-remaining-button-container">
+        <div class="pledge-remaining-container">
+          <div class="pledge-remaining tier-2-stock"></div>
+          <p>left</p>
+        </div>
+        <button type="button" class="select-button" id="select-tier-2">Select Reward</button>
+      </div>
+    </div>
+    
+    <div class="pledge-card out-of-stock">
+      <div class="pledge-tier">
+        <h4 class="pledge-name">Mahogany Special Edition</h4>
+        <h5 class="pledge-donation">Pledge $200 or more</h5>
+      </div>
+      <p>
+        You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added to our Backer member list. Shipping is included.
+      </p>
+      <div class="pledge-remaining-button-container">
+        <div class="pledge-remaining-container">
+          <div class="pledge-remaining tier-3-stock"></div>
+          <p>left</p>
+        </div>
+        <button type="button" class="select-button disabled" id="select-tier-3">Out of Stock</button>
+      </div>
+  </section>
+  
+
+  <!-- Selection modal start -->
+  <div class="modal selection-modal">
+    <div class="modal-content-container">
+      <div class="modal-header">
+        <h3>Back this project</h3>
+        <img src="images/icon-close-modal.svg" alt="Close modal icon" class="close-icon-modal">
+      </div>
+      <p class="description-modal">Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?</p>
+      
+      <div class="tier-container">
+        <div class="tier-heading-container">
+          <input type="radio" id="tier-0" name="donation-tier" value="tier-0" class="radio">
+          <div class="tier-label-container">
+            <label for="tier-0" class="tier-label">Pledge with no reward</label>
+            <label for="tier-0" class="donation-label"></label>
+          </div>
+        </div>
+        <p class="tier-description">Choose to support us without a reward if you simply believe in our project. As a backer, you will be signed up to receive product updates via email.</p>
+        <div class="tier-stock-container">
+          <div class="pledge-remaining tier-0-stock  pledge-remaining-modal"></div>
+          <p>left</p>
+        </div>
+        <div class="donation-selected-container">
+          <label for="donation-input">Enter your pledge</label>
+          <div class="donation-input-button-container">
+            <div class="donation-input-container">
+              <p>$</p>
+              <input type="number" id="donation-input" name="donation-input" value="" min="0" oninput="decimal(this)">
+            </div>
+            <button type="button" class="donate-button" id="donate-tier-0">Continue</button>
+          </div>
+        </div> 
+      </div>
+
+      <div class="tier-container">
+        <div class="tier-heading-container">
+          <input type="radio" id="tier-1" name="donation-tier" value="tier-1" class="radio">
+          <div class="tier-label-container">
+            <label for="tier-1" class="tier-label">Bamboo Stand</label>
+            <label for="tier-1" class="donation-label">Pledge $25 or more</label>
+          </div>
+        </div>
+        <p class="tier-description">You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and you’ll be added to a special Backer member list.</p>
+        <div class="tier-stock-container">
+          <div class="pledge-remaining tier-1-stock pledge-remaining-modal"></div>
+          <p>left</p>
+        </div>
+        <div class="donation-selected-container">
+          <label for="donation-input">Enter your pledge</label>
+          <div class="donation-input-button-container">
+            <div class="donation-input-container">
+              <p>$</p>
+              <input type="number" id="donation-input" name="donation-input" value="25" min="25" oninput="decimal(this)">
+            </div>
+            <button type="button" class="donate-button" id="donate-tier-1">Continue</button>
+          </div>
+        </div> 
+      </div>
+
+      <div class="tier-container">
+        <div class="tier-heading-container">
+          <input type="radio" id="tier-2" name="donation-tier" value="tier-2" class="radio">
+          <div class="tier-label-container">
+            <label for="tier-2" class="tier-label">Black Edition Stand</label>
+            <label for="tier-2" class="donation-label">Pledge $75 or more</label>
+          </div>
+        </div>
+        <p class="tier-description">You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer member list. Shipping is included.</p>
+        <div class="tier-stock-container">
+          <div class="pledge-remaining tier-2-stock pledge-remaining-modal"></div>
+          <p>left</p>
+        </div>
+        <div class="donation-selected-container">
+          <label for="donation-input">Enter your pledge</label>
+          <div class="donation-input-button-container">
+            <div class="donation-input-container">
+              <p>$</p>
+              <input type="number" id="donation-input" name="donation-input" value="75" min="75" oninput="decimal(this)">
+            </div>
+            <button type="button" class="donate-button" id="donate-tier-2">Continue</button>
+          </div>
+        </div> 
+      </div>
+
+      <div class="tier-container">
+        <div class="tier-heading-container">
+          <input type="radio" id="tier-3" name="donation-tier" value="tier-3" class="radio">
+          <div class="tier-label-container">
+            <label for="tier-3" class="tier-label">Mahogany Special Edition</label>
+            <label for="tier-3" class="donation-label">Pledge $200 or more</label>
+          </div>
+        </div>
+        <p class="tier-description">You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added to our Backer member list. Shipping is included.</p>
+        <div class="tier-stock-container">
+          <div class="pledge-remaining tier-3-stock pledge-remaining-modal"></div>
+          <p>left</p>
+        </div>
+        <div class="donation-selected-container">
+          <label for="donation-input">Enter your pledge</label>
+          <div class="donation-input-button-container">
+            <div class="donation-input-container">
+              <p>$</p>
+              <input type="number" id="donation-input" name="donation-input" value="200" min="200">
+            </div>
+            <button type="button" class="donate-button" id="donate-tier-3">Continue</button>
+          </div>
+        </div> 
+      </div>
+    </div>
+  </div>
+  <!-- Selection modal end -->
+  
+  <!-- Success modal start -->
+  <div class="modal success-modal">
+    <div class="modal-content-container success-modal-inner">
+      <img src="images/icon-check.svg" alt="Checkmark">
+      <h3>Thanks for your support!</h3>
+      <p>Your pledge brings us one step closer to sharing Mastercraft Bamboo Monitor Riser worldwide. You will get
+        an email once our campaign is completed.</p>
+      <button type="button" class="success-button">Got it!</button>
+    </div>
+  </div>
+  <!-- Success modal end -->
+
+  <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
